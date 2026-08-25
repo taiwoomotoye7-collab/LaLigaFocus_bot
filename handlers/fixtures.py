@@ -11,4 +11,4 @@ async def fixtures_command(message: types.Message):
     fixtures_data = LaLigaService.get_fixtures()
     formatted = LaLigaService.format_fixtures(fixtures_data)
     
-    await message.answer(formatted)
+    await message.answer(formatted, parse_mode="HTML")
