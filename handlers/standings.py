@@ -11,4 +11,4 @@ async def standings_command(message: types.Message):
     standings_data = LaLigaService.get_standings()
     formatted = LaLigaService.format_standings(standings_data)
     
-    await message.answer(formatted)
+    await message.answer(formatted, parse_mode="HTML")
